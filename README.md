@@ -12,7 +12,9 @@ This program is used to manage integers in a 1D array, allowing the user find, m
 4. Right click the Project in the Solution Explorer and click Set as Startup Project. 
 5. Press Crtl + F5 to build and run the program without debugging, or F5 to run with debugging. 
 
+
+### Valid User Input
 ![Valid data input from user](validInput.png)
 
-
+### Invalid User Input
 ![Invalid data input from user](errorHandling.png)
