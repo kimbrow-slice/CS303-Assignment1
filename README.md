@@ -1,6 +1,13 @@
 # CS303-Assignment1
 Jeffery Kimbrow
 
+#### References:
+https://www.delftstack.com/howto/cpp/cpp-input-validation/#google_vignette
+https://www.delftstack.com/howto/cpp/clear-input-buffer-in-cpp/
+https://stackoverflow.com/questions/15685240/how-to-copy-arrray-to-array-using-memcpy-in-c
+https://www.delftstack.com/howto/cpp/cpp-cin-fail/
+
+
 #### To Do:
 - Refactor input validation into a seperate function to call to. 
 - Fix validation for decimals, not currently working (round down issue?) 
