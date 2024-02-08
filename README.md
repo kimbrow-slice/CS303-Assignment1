@@ -10,6 +10,8 @@ Jeffery Kimbrow
 
 [C++ memcpy for array resizing](https://stackoverflow.com/questions/15685240/how-to-copy-arrray-to-array-using-memcpy-in-c)
 
+[C++ How to copy array](https://www.quora.com/What-is-the-correct-way-to-copy-an-array-if-arr1-12-23-45-and-the-new-array-is-arr2)
+
 
 
 
