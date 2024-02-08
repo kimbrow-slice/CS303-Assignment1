@@ -15,4 +15,4 @@ This program is used to manage integers in a 1D array, allowing the user find, m
 ![Valid data input from user](validInput.png)
 
 
-![Invalid data input from user](CS303-Assignment1/errorHandling.png)
+![Invalid data input from user](errorHandling.png)
