@@ -174,10 +174,10 @@ int main() {
                 cin >> newValue;
 
                 // Error handle for non-positive whole number input
-                if (cin.fail() || newValue <= 0) {
+                if (cin.fail() || newValue < 0 || newValue > 1) {
                     cin.clear(); // Clear error state
                     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore subsequent characters
-                    cout << "The input must be a positive whole number. Please try again." << endl;
+                    cout << "The input must be 0 for remove or 1 for replace. Please try again." << endl;
                     continue;
                 }
 
