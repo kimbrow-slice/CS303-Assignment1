@@ -11,7 +11,7 @@ int main() {
     // Adding relative path
     string filename = "A1input.txt";
     ifstream file(filename);
-
+    // Error handle if file doesn't open
     if (!file) {
         cerr << "Error opening file: " << filename << endl;
     }
