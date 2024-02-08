@@ -8,7 +8,7 @@ using namespace std;
 
 
 int main() {
-    // Adding relative path seen in VS to ensure program finds input file. 
+    // Adding relative path
     string filename = "A1input.txt";
     ifstream file(filename);
 
