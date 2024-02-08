@@ -2,12 +2,18 @@
 #include <iostream>
 #include <limits>
 #include <stdexcept>
+#include <fstream>
 
 using namespace std;
 
 
 int main() {
-    string filename = "../A1input.txt";
+    string filename = "..\\Assignment1-jeffKimbrow\\A1input.txt";
+    ifstream file(filename);
+
+    if (!file) {
+        cerr << "Error opening file: " << filename << endl;
+    }
 
     // Load the data from the file 
     loadData(filename.c_str());
@@ -192,7 +198,6 @@ int main() {
                 }
                 else if (newValue == 1) {
                     // Replace the value at index with the user's input.
-
 
                     cout << "Enter the new value to replace " << num << " at index " << index << ": ";
                     cin >> userInput;
