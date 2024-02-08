@@ -2,13 +2,13 @@
 Jeffery Kimbrow
 
 #### References:
-[C++ Input Validation] (https://www.delftstack.com/howto/cpp/cpp-input-validation/#google_vignette)
+[C++ Input Validation](https://www.delftstack.com/howto/cpp/cpp-input-validation/#google_vignette)
 
-[C++ Input Validation] (https://www.delftstack.com/howto/cpp/clear-input-buffer-in-cpp/)
+[C++ Input Validation](https://www.delftstack.com/howto/cpp/clear-input-buffer-in-cpp/)
 
-[C++ Input Validation] (https://www.delftstack.com/howto/cpp/cpp-cin-fail/)
+[C++ Input Validation](https://www.delftstack.com/howto/cpp/cpp-cin-fail/)
 
-[C++ memcpy for array resizing] (https://stackoverflow.com/questions/15685240/how-to-copy-arrray-to-array-using-memcpy-in-c)
+[C++ memcpy for array resizing](https://stackoverflow.com/questions/15685240/how-to-copy-arrray-to-array-using-memcpy-in-c)
 
 
 
