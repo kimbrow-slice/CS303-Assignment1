@@ -1,4 +1,9 @@
 # CS303-Assignment1
+Jeffery Kimbrow
+
+#### To Do:
+- Refactor input validation into a seperate function to call to. 
+- Fix validation for decimals, not currently working (round down issue?) 
 
 ## Overview
 
