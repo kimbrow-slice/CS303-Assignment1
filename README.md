@@ -10,7 +10,7 @@ Jeffery Kimbrow
 
 [C++ memcpy for array resizing](https://stackoverflow.com/questions/15685240/how-to-copy-arrray-to-array-using-memcpy-in-c)
 
-[Google](https://www.google.com) - _Google | Youtube | Gmail | Maps | PlayStore | GoogleDrive_
+
 
 
 
