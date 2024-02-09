@@ -5,10 +5,12 @@
 
 using namespace std;
 
-int* arr = new int[INITIAL_MAX_SIZE];
-int currentSize = 0;
-int currentCapacity = INITIAL_MAX_SIZE;
+// Global variables for array management 
+int* arr = new int[INITIAL_MAX_SIZE]; // Point to array
+int currentSize = 0; // Initial size of array
+int currentCapacity = INITIAL_MAX_SIZE; // Current Max Capacity 
 
+// Function to double the size of the array when the current capacity is reached
 void doubleArraySize() {
     int newCapacity = currentCapacity * 2;
     int* newArr = new int[newCapacity];
@@ -19,18 +21,22 @@ void doubleArraySize() {
     currentCapacity = newCapacity; // Update the current capacity
 }
 
+// Function to load data from file into array
 void loadData(const char* filename) {
     ifstream file(filename);
     int value;
-    while (file >> value) {
+    while (file >> value) { // Read in integers from file
         if (currentSize >= currentCapacity) {
             doubleArraySize(); // Double the array size if maximum capacity is reached
         }
-        arr[currentSize++] = value;
+        arr[currentSize++] = value; // Add value to the array
     }
     file.close();
 }
 
+/* Function to print all numbers in the array. This was used to show the user the updated array after 
+making modifications to the data */
+ 
 void printArray() {
     for (int i = 0; i < currentSize; ++i) {
         cout << arr[i] << " ";
@@ -38,6 +44,7 @@ void printArray() {
     cout << endl;
 }
 
+// Function to find the index of a given number in our array
 int find(int num) {
     for (int i = 0; i < currentSize; ++i) {
         if (arr[i] == num) return i;
@@ -45,45 +52,49 @@ int find(int num) {
     return -1;
 }
 
+// Function to modify the value within the array at a given index and return both old and new values
 pair<int, int> modify(int index, int newValue) {
     if (index < 0 || index >= currentSize) {
-        cout << "Index out of bounds." << endl;
-        return { -1, -1 };
+        cout << "Index out of bounds." << endl; 
+        return { -1, -1 }; // Return error if index is out of bounds
     }
-    int oldValue = arr[index];
-    arr[index] = newValue;
-    return { oldValue, newValue };
+    int oldValue = arr[index]; // Store old value
+    arr[index] = newValue; // Update value at given index
+    return { oldValue, newValue }; // Return old and new valyue
 }
 
+// Function to add a number into the array
 bool add(int num) {
     if (currentSize >= currentCapacity) {
         doubleArraySize(); // Double the array size if maximum capacity is reached
     }
-    arr[currentSize++] = num;
-    return true; // Successful addition
+    arr[currentSize++] = num; // Add number to the and post increment current size
+    return true; // Successful addition to the array
 }
 
+// Function either remove or replace a value at given index 
 bool removeOrReplace(int index, bool remove) {
     if (index < 0 || index >= currentSize) {
         cout << "Index out of bounds." << endl;
-        return false;
+        return false; // Return error if index is out of bounds
     }
     if (remove) {
         for (int i = index; i < currentSize - 1; ++i) {
-            arr[i] = arr[i + 1];
+            arr[i] = arr[i + 1]; // Shift elements to fill the gap from removing
         }
-        --currentSize;
+        --currentSize; // Decrement the current size
     }
     else {
         arr[index] = 0;
     }
-    return true;
+    return true; // Successfully removed or replaced
 }
 
+// Function to check if a string represents a positive whole number
 bool isPosWholeNum(const string& str) {
-    if (str.empty()) return false; // Ensure empty string is not a positive whole number
+    if (str.empty()) return false; // Check for empty string
     for (char c : str) {
-        if (isdigit(c)) return false; // Check each character in string
+        if (isdigit(c)) return false; // Return false if input is not a digit
     }
-    return true;
+    return true; // User input is a positive whole number
 }
